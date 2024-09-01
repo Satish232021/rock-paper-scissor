@@ -1,0 +1,67 @@
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: black; */
+    color: white;
+    background-image: url(./images/rock-paper-scissors.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title{
+    text-align: center;
+    font-family: caveat,arial;
+    font-weight: 700;
+    font-size: x-large;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: rgba(249, 251, 251, 0.491);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    color: black;
+    box-shadow: 5px 5px 50px black;
+
+}
+img{
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    border: 2px solid black;
+    
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.result img{
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 20px black;
+    outline: none;
+    
+
+}
+.final-output{
+    text-align: center;
+    font-family: caveat,arial;
+    font-size: 30px;
+    color: black;
+}
+.userImage:hover{
+    filter: brightness(1.5) contrast(2);
+    color: white;
+    box-shadow: 2px 2px 10px white;
+}
