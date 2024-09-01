@@ -1,3 +1,8 @@
+*{
+    -webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
 body{
     display: grid;
     justify-content: center;
