@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
-    <title>Rock-Paper-Scissor</title>
-    
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-
-
-   <div class="game">
-    <div>
+    <div class="main">
         <p class="title">Rock Paper Scissor</p> 
+        <div class="btns">
+        <button class="move-button" onclick="result('rock')"><img class="move-icon" src="./images/rock-emoji.png" alt=""></button>
+        <button class="move-button" onclick="result('paper')"><img class="move-icon" src="./images/paper-emoji.png" alt=""></button>
+        <button class="move-button" onclick="result('scissors')"><img class="move-icon" src="./images/scissors-emoji.png" alt=""></button>
+        </div>
+        
+        <p class="js-result result"></p>
+        <p class="js-moves moves"></p>
+        <p class="js-score score"></p>
+        <button onclick="reset()" class="reset-score-btn">Reset Scores</button>
     </div>
-    <div>
-    <img class="userImage" onclick="result(1)" src="./images/rock.png" alt="">
-    <img class="userImage" onclick="result(2)" src="./images/paper.png" alt="">
-    <img class="userImage" onclick="result(3)" src="./images/scissors.png" alt="">
-    </div>
-    
-    <div class="result">
-        <img class="mySelection" src="./images/paper.png" alt="">
-        <img class="computerSelection" src="./images/scissors.png" alt="">
-    </div>
-    <p class="final-output">result will shown here</p>
-   </div>
+
    <script src="./function.js"></script>
 </body>
 </html>
