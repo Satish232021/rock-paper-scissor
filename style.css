@@ -1,72 +1,107 @@
+
 *{
+    padding: 0;
+    margin: 0;
     -webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
+    -webkit-touch-callout: none;
 }
 
 body{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: black; */
     color: white;
+    font-family: caveat,arial;
     background-image: url(./images/rock-paper-scissors.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-.title{
-    text-align: center;
-    font-family: caveat,arial;
-    font-weight: 700;
-    font-size: x-large;
-}
-.game{
+.main{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    border: 1px solid black;
-    background-color: rgba(249, 251, 251, 0.491);
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    color: black;
-    box-shadow: 5px 5px 50px black;
-
-}
-img{
-    height: 50px;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-    cursor: pointer;
-    border: 2px solid black;
-    
-}
-.result{
-    display: flex;
     align-items: center;
     justify-content: center;
-    
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.436);
+    backdrop-filter: blur(10px);
+    width: 500px;
+    box-shadow: 2px 2px 50px black;
+    border-radius: 30px;
 }
-.result img{
-    width: 50px;
+.btns{
+    display: flex;
+    margin-bottom: 0;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.move-icon{
+    height: 50px;
+}
+.move-button{
+    background-color: transparent;
+    border: 2px solid white;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    text-align: center;
-    box-shadow: 2px 2px 20px black;
-    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+}
+.move-button:hover{
+    background-color: rgba(250, 248, 248, 0.217);
+}
+.moves{
+    font-size: 30px;
+
+}
+.result{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.score{
+    margin-top: 40px;
+    font-size: 30px;
+}
+.reset-score-btn{
+    background-color:black;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 8px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+   /*  transition: all 1s ease;
+    position: relative;
+    overflow: hidden; */
+    /* z-index: 1; */
     
 
 }
-.final-output{
-    text-align: center;
-    font-family: caveat,arial;
-    font-size: 30px;
+.reset-score-btn:hover{
+    background-color: rgba(0, 0, 0, 0.482);
+}
+/* .reset-score-btn::before{
+    background-color: aqua;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    transition: all 1s ease;
+    
+}
+.reset-score-btn:hover::before{
+    width: 100%;
     color: black;
-}
-.userImage:hover{
-    filter: brightness(1.5) contrast(2);
-    color: white;
-    box-shadow: 2px 2px 10px white;
-}
+} */
