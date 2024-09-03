@@ -69,7 +69,8 @@ body{
     margin-top: 40px;
     font-size: 30px;
 }
-.reset-score-btn{
+.reset-score-btn,
+.auto-play-btn{
     background-color:black;
     color: white;
     border: none;
