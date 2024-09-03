@@ -16,7 +16,47 @@ score = {
 }
 } */
 
+document.querySelector('.js-auto-play-button').addEventListener('click', () => {
+    autoPlay();
+})
 
+let isAutoPlaying = false;
+let intervalId;  
+
+//  const autoPlay = () => { /* its not recommend to use here cuz of difficulty to read */
+
+//  } 
+function autoPlay() {
+    if (!isAutoPlaying){
+      intervalId = setInterval(/* function */() => { /* its recommend to use arrow function */
+            const userSelection = random();
+            result(userSelection);
+        },1000);
+        isAutoPlaying = true;
+
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
+    
+}
+
+function random(){
+   const value = Math.floor(Math.random()*3)+1;
+   let userSelection = '';
+    if (value === 1){
+        userSelection = 'rock';
+    }else if(value === 2){
+        userSelection = 'paper';
+    }else if(value === 3){
+        userSelection = 'scissors';
+    }
+    return userSelection;
+} 
+
+document.querySelector('.js-reset-score-button').addEventListener('click', () => {
+    reset();
+})
 function reset(){
     score.wins = 0;
     score.losses= 0;
@@ -24,6 +64,17 @@ function reset(){
     localStorage.removeItem('score');
     updateScoreElement();
 }
+
+document.querySelector('.js-rock-button').addEventListener('click', () =>{
+    result('rock');
+});
+document.querySelector('.js-paper-button').addEventListener('click', () =>{
+    result('paper');
+});
+document.querySelector('.js-scissors-button').addEventListener('click', () =>{
+    result('scissors');
+});
+
 function result(userSelection){
 const value = Math.floor(Math.random()*3)+1;
 
@@ -77,8 +128,8 @@ updateScoreElement();
 document.querySelector('.js-result').innerHTML = final;
 document.querySelector('.js-moves').innerHTML = `
     You
-    <img class="move-icon" src="./images/${userSelection}-emoji.png" alt="">
-    <img class="move-icon" src="./images/${computerMove}-emoji.png" alt="">
+    <img class="move-icon" src="./rock-paper-scissor/images/${userSelection}-emoji.png" alt="">
+    <img class="move-icon" src="./rock-paper-scissor/images/${computerMove}-emoji.png" alt="">
     Computer'`;/* `` these are called template strings */
 }
 function updateScoreElement(){
