@@ -128,8 +128,8 @@ updateScoreElement();
 document.querySelector('.js-result').innerHTML = final;
 document.querySelector('.js-moves').innerHTML = `
     You
-    <img class="move-icon" src="./${userSelection}-emoji.png" alt="">
-    <img class="move-icon" src="./${computerMove}-emoji.png" alt="">
+    <img class="move-icon" src="./images/${userSelection}-emoji.png" alt="">
+    <img class="move-icon" src="./images/${computerMove}-emoji.png" alt="">
     Computer'`;/* `` these are called template strings */
 }
 function updateScoreElement(){
