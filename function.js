@@ -75,6 +75,15 @@ document.querySelector('.js-scissors-button').addEventListener('click', () =>{
     result('scissors');
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'r'){
+        result('rock');
+    }else if (event.key === 'p'){
+        result('paper');
+    }else if(event.key === 's'){
+        result('scissors');
+    }
+});
 function result(userSelection){
 const value = Math.floor(Math.random()*3)+1;
 
